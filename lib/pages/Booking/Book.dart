@@ -130,7 +130,7 @@ class _BookState extends State<Book> {
               style: new TextStyle(
                 fontSize: EventSizedConstants.TextappBarSize,
                 fontWeight: FontWeight.bold,
-                fontFamily: ArabicFonts.Cairo,
+                fontFamily: ArabicFonts.El_Messiri,
                 package: 'google_fonts_arabic',
                 color: Colors.white,
                 shadows: <Shadow>[
@@ -219,7 +219,7 @@ class _BookState extends State<Book> {
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
-                            fontFamily: ArabicFonts.Cairo,
+                            fontFamily: ArabicFonts.El_Messiri,
                             package: 'google_fonts_arabic',
                           ),
                           textAlign: TextAlign.center,
@@ -236,7 +236,7 @@ class _BookState extends State<Book> {
                         child: Text(
                           '${widget.description}',
                           style: TextStyle(
-                            fontFamily: ArabicFonts.Cairo,
+                            fontFamily: ArabicFonts.El_Messiri,
                             fontSize: 14.0,
                             package: 'google_fonts_arabic',
                           ),
@@ -261,8 +261,8 @@ class _BookState extends State<Book> {
                         child: Text(
                           "الخدمات",
                           style: TextStyle(
-                            color: Colors.lightBlueAccent,
-                            fontFamily: ArabicFonts.Cairo,
+                            color: Colors.brown,
+                            fontFamily: ArabicFonts.El_Messiri,
                             package: 'google_fonts_arabic',
                             fontWeight: FontWeight.bold,
                             fontSize: EventSizedConstants.TextTitleFontSized,
@@ -297,7 +297,7 @@ class _BookState extends State<Book> {
                                     item['service_type'],
                                     style: TextStyle(
                                       color: Colors.black,
-                                      fontFamily: ArabicFonts.Cairo,
+                                      fontFamily: ArabicFonts.El_Messiri,
                                       package: 'google_fonts_arabic',
                                       fontWeight: FontWeight.bold,
                                       fontSize: 12.0,
@@ -339,8 +339,8 @@ class _BookState extends State<Book> {
                       Text(
                         "الاسم ",
                         style: TextStyle(
-                          color: Colors.lightBlueAccent,
-                          fontFamily: ArabicFonts.Cairo,
+                          color: Colors.black,
+                          fontFamily: ArabicFonts.El_Messiri,
                           package: 'google_fonts_arabic',
                           fontWeight: FontWeight.bold,
                           fontSize: EventSizedConstants.TextTitleFontSized,
@@ -349,8 +349,8 @@ class _BookState extends State<Book> {
                       Text(
                         '${userName}',
                         style: TextStyle(
-                          color: Colors.lightBlueAccent,
-                          fontFamily: ArabicFonts.Cairo,
+                          color: Colors.black,
+                          fontFamily: ArabicFonts.El_Messiri,
                           package: 'google_fonts_arabic',
                           fontWeight: FontWeight.bold,
                           fontSize: EventSizedConstants.TextTitleFontSized,
@@ -369,8 +369,8 @@ class _BookState extends State<Book> {
                       Text(
                         "إسم الوكالة",
                         style: TextStyle(
-                          color: Colors.lightBlueAccent,
-                          fontFamily: ArabicFonts.Cairo,
+                          color: Colors.black,
+                          fontFamily: ArabicFonts.El_Messiri,
                           package: 'google_fonts_arabic',
                           fontWeight: FontWeight.bold,
                           fontSize: EventSizedConstants.TextTitleFontSized,
@@ -379,8 +379,8 @@ class _BookState extends State<Book> {
                       Text(
                         '${widget.name}',
                         style: TextStyle(
-                          color: Colors.lightBlueAccent,
-                          fontFamily: ArabicFonts.Cairo,
+                          color: Colors.black,
+                          fontFamily: ArabicFonts.El_Messiri,
                           package: 'google_fonts_arabic',
                           fontWeight: FontWeight.bold,
                           fontSize: EventSizedConstants.TextTitleFontSized,
@@ -399,8 +399,8 @@ class _BookState extends State<Book> {
                       Text(
                         "اسم القسم ",
                         style: TextStyle(
-                          color: Colors.lightBlueAccent,
-                          fontFamily: ArabicFonts.Cairo,
+                          color: Colors.black,
+                          fontFamily: ArabicFonts.El_Messiri,
                           package: 'google_fonts_arabic',
                           fontWeight: FontWeight.bold,
                           fontSize: EventSizedConstants.TextTitleFontSized,
@@ -409,8 +409,8 @@ class _BookState extends State<Book> {
                       Text(
                         '${widget.name}',
                         style: TextStyle(
-                          color: Colors.lightBlueAccent,
-                          fontFamily: ArabicFonts.Cairo,
+                          color: Colors.black,
+                          fontFamily: ArabicFonts.El_Messiri,
                           package: 'google_fonts_arabic',
                           fontWeight: FontWeight.bold,
                           fontSize: EventSizedConstants.TextTitleFontSized,
@@ -429,8 +429,8 @@ class _BookState extends State<Book> {
                       Text(
                         "التاريخ ",
                         style: TextStyle(
-                          color: Colors.lightBlueAccent,
-                          fontFamily: ArabicFonts.Cairo,
+                          color: Colors.black,
+                          fontFamily: ArabicFonts.El_Messiri,
                           package: 'google_fonts_arabic',
                           fontWeight: FontWeight.bold,
                           fontSize: EventSizedConstants.TextTitleFontSized,
@@ -439,8 +439,8 @@ class _BookState extends State<Book> {
                       Text(
                         '${_date.toString().substring(0, 10)}',
                         style: TextStyle(
-                          color: Colors.lightBlueAccent,
-                          fontFamily: ArabicFonts.Cairo,
+                          color: Colors.black,
+                          fontFamily: ArabicFonts.El_Messiri,
                           package: 'google_fonts_arabic',
                           fontWeight: FontWeight.bold,
                           fontSize: EventSizedConstants.TextTitleFontSized,
@@ -450,8 +450,8 @@ class _BookState extends State<Book> {
                         child: Text(
                           "إختيار",
                           style: TextStyle(
-                            color: Colors.lightBlueAccent,
-                            fontFamily: ArabicFonts.Cairo,
+                            color: Colors.black,
+                            fontFamily: ArabicFonts.El_Messiri,
                             package: 'google_fonts_arabic',
                             fontWeight: FontWeight.bold,
                             fontSize: EventSizedConstants.TextTitleFontSized,
@@ -472,8 +472,8 @@ class _BookState extends State<Book> {
                       Text(
                         "الوقت",
                         style: TextStyle(
-                          color: Colors.lightBlueAccent,
-                          fontFamily: ArabicFonts.Cairo,
+                          color: Colors.black,
+                          fontFamily: ArabicFonts.El_Messiri,
                           package: 'google_fonts_arabic',
                           fontWeight: FontWeight.bold,
                           fontSize: EventSizedConstants.TextTitleFontSized,
@@ -482,8 +482,8 @@ class _BookState extends State<Book> {
                       Text(
                         '${_time.toString().substring(10, 15)}',
                         style: TextStyle(
-                          color: Colors.lightBlueAccent,
-                          fontFamily: ArabicFonts.Cairo,
+                          color: Colors.black,
+                          fontFamily: ArabicFonts.El_Messiri,
                           package: 'google_fonts_arabic',
                           fontWeight: FontWeight.bold,
                           fontSize: EventSizedConstants.TextTitleFontSized,
@@ -493,8 +493,8 @@ class _BookState extends State<Book> {
                         child: Text(
                           "إختيار",
                           style: TextStyle(
-                            color: Colors.lightBlueAccent,
-                            fontFamily: ArabicFonts.Cairo,
+                            color: Colors.black,
+                            fontFamily: ArabicFonts.El_Messiri,
                             package: 'google_fonts_arabic',
                             fontWeight: FontWeight.bold,
                             fontSize: EventSizedConstants.TextTitleFontSized,
@@ -517,15 +517,15 @@ class _BookState extends State<Book> {
             new Expanded(
               child: new MaterialButton(
                 onPressed: _showModalSheet,
-                color: Color(0xFF13A1C5),
-                splashColor: Color(0xFF009AFF),
+                color: Colors.brown,
+                splashColor: Colors.brown[200],
                 textColor: Colors.white,
                 elevation: 0.2,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: new Text("التقيمات",
                       style: TextStyle(
-                          fontFamily: ArabicFonts.Cairo,
+                          fontFamily: ArabicFonts.El_Messiri,
                           package: 'google_fonts_arabic',
                           fontSize: EventSizedConstants.TextButtonFontSized,
                           fontWeight: FontWeight.bold,
@@ -551,8 +551,8 @@ class _BookState extends State<Book> {
             new Expanded(
               child: new MaterialButton(
                 onPressed: () => _bookingButtonAction(),
-                color: Color(0xFF13A1C5),
-                splashColor: Color(0xFF009AFF),
+                color: Colors.brown,
+                splashColor: Colors.brown[200],
                 textColor: Colors.white,
                 elevation: 0.2,
                 child: Padding(
@@ -560,7 +560,7 @@ class _BookState extends State<Book> {
                   child: new Text(
                     "تأكيد الحجز",
                     style: TextStyle(
-                      fontFamily: ArabicFonts.Cairo,
+                      fontFamily: ArabicFonts.El_Messiri,
                       package: 'google_fonts_arabic',
                       fontSize: EventSizedConstants.TextButtonFontSized,
                       fontWeight: FontWeight.bold,
@@ -601,7 +601,7 @@ class _BookState extends State<Book> {
                 "عرض التقيمات",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontFamily: ArabicFonts.Cairo,
+                    fontFamily: ArabicFonts.El_Messiri,
                     color: Colors.white,
                     package: 'google_fonts_arabic',
                     fontSize: EventSizedConstants.TextappBarSize,
@@ -647,7 +647,7 @@ class _BookState extends State<Book> {
                         style: TextStyle(
                           fontSize: 15.0,
                           fontWeight: FontWeight.bold,
-                          fontFamily: ArabicFonts.Cairo,
+                          fontFamily: ArabicFonts.El_Messiri,
                           package: 'google_fonts_arabic',
                         ),
                       ),
@@ -726,7 +726,7 @@ class _BookState extends State<Book> {
 //                                          style: TextStyle(
 //                                            fontSize: 12.0,
 //                                            fontWeight: FontWeight.bold,
-//                                            fontFamily: ArabicFonts.Cairo,
+//                                            fontFamily: ArabicFonts.El_Messiri,
 //                                            package: 'google_fonts_arabic',
 //                                          ),
 //                                        ),
@@ -736,7 +736,7 @@ class _BookState extends State<Book> {
 //                                        style: TextStyle(
 //                                          fontSize: 15.0,
 //                                          color: Colors.green,
-//                                          fontFamily: ArabicFonts.Cairo,
+//                                          fontFamily: ArabicFonts.El_Messiri,
 //                                          package: 'google_fonts_arabic',
 //                                        ),
 //                                      ),
@@ -750,7 +750,7 @@ class _BookState extends State<Book> {
 //                                          style: TextStyle(
 //                                            fontSize: 10.0,
 //                                            color: Colors.pinkAccent,
-//                                            fontFamily: ArabicFonts.Cairo,
+//                                            fontFamily: ArabicFonts.El_Messiri,
 //                                            package: 'google_fonts_arabic',
 //                                          ),
 //                                          textAlign: TextAlign.center,
@@ -784,7 +784,7 @@ class _BookState extends State<Book> {
 //            Text(
 //              "عفواَ لا توجد تقيمات حالياً",
 //              style: TextStyle(
-//                  fontFamily: ArabicFonts.Cairo,
+//                  fontFamily: ArabicFonts.El_Messiri,
 //                  package: 'google_fonts_arabic',
 //                  fontSize: 20.0,
 //                  color: Colors.red,
@@ -851,8 +851,8 @@ class _BookState extends State<Book> {
               content: new Text(
                 'لقد قمت باختيار تاريخ او وقت سابق',
                 style: TextStyle(
-                  color: Color(0xFF37505D),
-                  fontFamily: ArabicFonts.Cairo,
+                  color: Colors.white,
+                  fontFamily: ArabicFonts.El_Messiri,
                   package: 'google_fonts_arabic',
                 ),
               ),
@@ -883,7 +883,7 @@ class _BookState extends State<Book> {
                       'تم الحجز بنجاح ',
                       style: TextStyle(
                         color: Colors.white,
-                        fontFamily: ArabicFonts.Cairo,
+                        fontFamily: ArabicFonts.El_Messiri,
                         package: 'google_fonts_arabic',
                         fontWeight: FontWeight.bold,
                       ),
@@ -905,7 +905,7 @@ class _BookState extends State<Book> {
                       'عفواً لم تتم عملية الحجز',
                       style: TextStyle(
                         color: Colors.white,
-                        fontFamily: ArabicFonts.Cairo,
+                        fontFamily: ArabicFonts.El_Messiri,
                         package: 'google_fonts_arabic',
                         fontWeight: FontWeight.bold,
                       ),
@@ -926,8 +926,8 @@ class _BookState extends State<Book> {
                     content: new Text(
                       'عفواً هنالك خظأ في النظام يرجى المحاولة مرة اخرى',
                       style: TextStyle(
-                        color: Color(0xFF37505D),
-                        fontFamily: ArabicFonts.Cairo,
+                        color: Colors.white,
+                        fontFamily: ArabicFonts.El_Messiri,
                         package: 'google_fonts_arabic',
                       ),
                     ),

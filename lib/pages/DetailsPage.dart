@@ -6,8 +6,10 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 import 'package:wfoodalbayt/Account/utils/app_shared_preferences.dart';
 import 'package:wfoodalbayt/pages/Booking/Book.dart';
-import 'package:wfoodalbayt/pages/Booking/FlightBooking.dart';
-import 'package:wfoodalbayt/pages/Booking/SeeBooking.dart';
+import 'package:wfoodalbayt/pages/Booking/TripsBook.dart';
+import 'package:wfoodalbayt/pages/Booking/appartmentBook.dart';
+import 'package:wfoodalbayt/pages/Booking/flightSeaBooking.dart';
+import 'package:wfoodalbayt/pages/Booking/hotelBooking.dart';
 import 'package:wfoodalbayt/pages/Rating.dart';
 import 'package:wfoodalbayt/ui_widgets/SizedText.dart';
 
@@ -342,7 +344,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   ),
                 ),
                 //committee
-                new Padding(
+                Padding(
                   padding: const EdgeInsets.only(left: 10.0, right: 10.0),
                   child: Row(
                     children: <Widget>[
@@ -361,36 +363,53 @@ class _DetailsPageState extends State<DetailsPage> {
                     ],
                   ),
                 ),
-                new Align(
+                Align(
                   alignment: Alignment.topCenter,
                   child: Wrap(
                     spacing: 3.0,
-                    runSpacing: 5.0,
+                    runSpacing: 0.0,
                     direction: Axis.horizontal,
                     alignment: WrapAlignment.start,
                     children: widget.service
                         .map(
-                          (service) => new Card(
-                            elevation: 2.0,
-                            color: Colors.grey,
-                            child: new InkWell(
-                              highlightColor: Colors.white.withAlpha(30),
-                              splashColor: Colors.white.withAlpha(20),
-                              child: new Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.stretch,
-                                  mainAxisSize: MainAxisSize.min,
-                                  verticalDirection: VerticalDirection.up,
-                                  children: <Widget>[
-                                    new Image.network(service['img']),
-                                    new Center(
-                                      child: new Text(service['service_type']),
-                                    )
-                                  ]),
-                              onTap: () {
-                                _tappedCategoryCell(widget.fieldId as int,
-                                    service['id'] as int);
-                              },
+                          (service) => InkWell(
+                            onTap: () {
+                              _tappedCategoryCell(
+                                widget.fieldId.toString(),
+                                service['id'].toString(),
+                              );
+                            },
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(5.0),
+                                ),
+                              ),
+                              margin: EdgeInsets.symmetric(vertical: 5.0),
+                              padding: EdgeInsets.all(5.0),
+                              width: 100.0,
+                              height: 110.0,
+                              child: Column(
+                                children: <Widget>[
+                                  Image.network(
+                                    service['img'],
+                                    height: 50.0,
+                                    width: 50.0,
+                                  ),
+                                  SizedBox(
+                                    height: 10.0,
+                                  ),
+                                  Text(
+                                    service['service_type'],
+                                    style: TextStyle(
+                                      fontFamily: ArabicFonts.El_Messiri,
+                                      package: 'google_fonts_arabic',
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         )
@@ -401,7 +420,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   width: 5.0,
                 ),
                 //map
-                new Padding(
+                Padding(
                   padding: const EdgeInsets.only(left: 10.0, right: 10.0),
                   child: Row(
                     children: <Widget>[
@@ -420,14 +439,40 @@ class _DetailsPageState extends State<DetailsPage> {
                     ],
                   ),
                 ),
+                new SizedBox(
+                  width: 2.0,
+                ),
                 new Container(
                   height: 400.0,
                   child: new Stack(
                     children: <Widget>[
+                      new GoogleMap(
+                        markers: _markers,
+                        mapType: _defaultMapType,
+                        myLocationEnabled: true,
+                        initialCameraPosition: _initialPosition,
+                        onMapCreated: _onMapCreated,
+                        zoomGesturesEnabled: true,
+                        scrollGesturesEnabled: true,
+                        compassEnabled: true,
+                        tiltGesturesEnabled: true,
+                        rotateGesturesEnabled: true,
+                      ),
                       new Container(
                         margin: EdgeInsets.only(top: 80, right: 10),
                         alignment: Alignment.topRight,
-                        child: Text(widget.addressText),
+                        child: Column(
+                          children: <Widget>[
+                            FloatingActionButton(
+                                child: Icon(Icons.layers),
+                                elevation: 5,
+                                backgroundColor: Colors.teal[200],
+                                onPressed: () {
+                                  _changeMapType();
+                                  print('Changing the Map Type');
+                                }),
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -441,66 +486,6 @@ class _DetailsPageState extends State<DetailsPage> {
         color: Colors.white,
         child: Row(
           children: <Widget>[
-            new Expanded(
-              child: new MaterialButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Book(
-                        id: widget.id,
-                        fieldId: widget.fieldId,
-                        field: widget.field,
-                        cityId: widget.cityId,
-                        cityName: widget.cityName,
-                        name: widget.name,
-                        description: widget.description,
-                        addressText: widget.addressText,
-                        latitude: widget.latitude,
-                        longitude: widget.longitude,
-                        service: widget.service,
-                        review: widget.review,
-                        rating: widget.rating,
-                        profileImg: widget.profileImg,
-                        isActive: widget.isActive,
-                      ),
-                    ),
-                  );
-                },
-                color: Colors.brown,
-                splashColor: Colors.brown[200],
-                textColor: Colors.white,
-                elevation: 0.2,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: new Text(
-                    "إحجز الان",
-                    style: TextStyle(
-                      fontFamily: ArabicFonts.El_Messiri,
-                      package: 'google_fonts_arabic',
-                      fontSize: EventSizedConstants.TextButtonFontSized,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      shadows: <Shadow>[
-                        Shadow(
-                          offset: Offset(3.0, 3.0),
-                          blurRadius: 3.0,
-                          color: Color.fromARGB(255, 0, 0, 0),
-                        ),
-                        Shadow(
-                          offset: Offset(3.0, 3.0),
-                          blurRadius: 8.0,
-                          color: Color.fromARGB(125, 0, 0, 255),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            new SizedBox(
-              width: 2.0,
-            ),
             new Expanded(
               child: new MaterialButton(
                 onPressed: _showModalSheet,
@@ -541,40 +526,186 @@ class _DetailsPageState extends State<DetailsPage> {
     );
   }
 
-  void _tappedCategoryCell(int subfieldId, int serviceId) {
-    switch (serviceId) {
-      case 1: //FlightBooking.dart
-        //تذاكر طيران
+  void _tappedCategoryCell(String subfieldId, String serviceId) {
+    switch ('$serviceId') {
+      case '1': //flightSeaBooking.dart
+        /// Booking for flight
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => FlightBooking(),
+            builder: (context) => flightSeaBooking(
+              id: widget.id,
+              fieldId: widget.fieldId,
+              field: widget.field,
+              cityId: widget.cityId,
+              cityName: widget.cityName,
+              name: widget.name,
+              description: widget.description,
+              addressText: widget.addressText,
+              latitude: widget.latitude,
+              longitude: widget.longitude,
+              service: widget.service,
+              review: widget.review,
+              rating: widget.rating,
+              profileImg: widget.profileImg,
+              isActive: widget.isActive,
+            ),
           ),
         );
         break;
-      case 2: //SeeBooking
-        //تذاكر نقل بحري
+      case '2': //SeeBooking
+        /// Booking for sea
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => SeeBooking(),
+            builder: (context) => flightSeaBooking(
+              id: widget.id,
+              fieldId: widget.fieldId,
+              field: widget.field,
+              cityId: widget.cityId,
+              cityName: widget.cityName,
+              name: widget.name,
+              description: widget.description,
+              addressText: widget.addressText,
+              latitude: widget.latitude,
+              longitude: widget.longitude,
+              service: widget.service,
+              review: widget.review,
+              rating: widget.rating,
+              profileImg: widget.profileImg,
+              isActive: widget.isActive,
+            ),
           ),
         );
         break;
-      case 3:
-        //ايجار سيارات
+      case '3':
+
+        /// Rental Car Booking
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Book(
+              id: widget.id,
+              fieldId: widget.fieldId,
+              field: widget.field,
+              cityId: widget.cityId,
+              cityName: widget.cityName,
+              name: widget.name,
+              description: widget.description,
+              addressText: widget.addressText,
+              latitude: widget.latitude,
+              longitude: widget.longitude,
+              service: widget.service,
+              review: widget.review,
+              rating: widget.rating,
+              profileImg: widget.profileImg,
+              isActive: widget.isActive,
+            ),
+          ),
+        );
         break;
-      case 4:
-        //ايجار فنادق
+      case '4':
+
+        /// Hotel Booking
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => HotelBooking(
+              id: widget.id,
+              fieldId: widget.fieldId,
+              field: widget.field,
+              cityId: widget.cityId,
+              cityName: widget.cityName,
+              name: widget.name,
+              description: widget.description,
+              addressText: widget.addressText,
+              latitude: widget.latitude,
+              longitude: widget.longitude,
+              service: widget.service,
+              review: widget.review,
+              rating: widget.rating,
+              profileImg: widget.profileImg,
+              isActive: widget.isActive,
+            ),
+          ),
+        );
         break;
-      case 5:
-        //ايجار شقق
+      case '5':
+
+        /// Appartment Book
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => AppartmentBook(
+              id: widget.id,
+              fieldId: widget.fieldId,
+              field: widget.field,
+              cityId: widget.cityId,
+              cityName: widget.cityName,
+              name: widget.name,
+              description: widget.description,
+              addressText: widget.addressText,
+              latitude: widget.latitude,
+              longitude: widget.longitude,
+              service: widget.service,
+              review: widget.review,
+              rating: widget.rating,
+              profileImg: widget.profileImg,
+              isActive: widget.isActive,
+            ),
+          ),
+        );
         break;
-      case 6:
-        //سفاري ورحلات
+      case '6':
+
+        /// Trips Booking
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => TripsBook(
+              id: widget.id,
+              fieldId: widget.fieldId,
+              field: widget.field,
+              cityId: widget.cityId,
+              cityName: widget.cityName,
+              name: widget.name,
+              description: widget.description,
+              addressText: widget.addressText,
+              latitude: widget.latitude,
+              longitude: widget.longitude,
+              service: widget.service,
+              review: widget.review,
+              rating: widget.rating,
+              profileImg: widget.profileImg,
+              isActive: widget.isActive,
+            ),
+          ),
+        );
         break;
-      case 7:
+      case '7':
         //خدمات افراد
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Book(
+              id: widget.id,
+              fieldId: widget.fieldId,
+              field: widget.field,
+              cityId: widget.cityId,
+              cityName: widget.cityName,
+              name: widget.name,
+              description: widget.description,
+              addressText: widget.addressText,
+              latitude: widget.latitude,
+              longitude: widget.longitude,
+              service: widget.service,
+              review: widget.review,
+              rating: widget.rating,
+              profileImg: widget.profileImg,
+              isActive: widget.isActive,
+            ),
+          ),
+        );
         break;
     }
   }

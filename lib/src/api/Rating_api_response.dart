@@ -14,10 +14,7 @@ class Rating_api_response {
       final response =
           await http.post(_serviceUrl, headers: _headers, body: json);
       var c = _fromJson(response.body);
-      print('**************************');
-      print(c.centerId);
-      print(c.rate);
-      print('**************************');
+
       return c;
     } catch (e) {
       print('Oooops! Server Exception!!!');

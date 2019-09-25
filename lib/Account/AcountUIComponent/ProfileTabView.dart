@@ -102,7 +102,7 @@ class _profilState extends State<ProfileTabView> {
                         Padding(
                           padding: const EdgeInsets.only(top: 3.0),
                           child: Text(
-                            "$firstName  $lastName",
+                            "${firstName != null ? firstName + lastName : "إسم المستخدم"}",
                             style: TextStyle(
                               fontFamily: ArabicFonts.El_Messiri,
                               package: 'google_fonts_arabic',
@@ -112,7 +112,7 @@ class _profilState extends State<ProfileTabView> {
                         Padding(
                           padding: const EdgeInsets.only(top: 3.0),
                           child: Text(
-                            "$userPhone",
+                            "${userPhone != null ? userPhone : "رقم الهاتف"}",
                             style: TextStyle(
                               fontFamily: ArabicFonts.El_Messiri,
                               package: 'google_fonts_arabic',
@@ -122,26 +122,26 @@ class _profilState extends State<ProfileTabView> {
                         Padding(
                           padding: const EdgeInsets.only(top: 3.0),
                           child: Text(
-                            "$userEmail",
+                            "${userEmail != null ? userEmail : "البريد الألكتروني"}",
                             style: TextStyle(
                               fontFamily: ArabicFonts.El_Messiri,
                               package: 'google_fonts_arabic',
                             ),
                           ),
                         ),
-                        InkWell(
-                          onTap: null,
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 0.0),
-                            child: Text(
-                              "تعديل",
-                              style: TextStyle(
-                                fontFamily: ArabicFonts.El_Messiri,
-                                package: 'google_fonts_arabic',
-                              ),
-                            ),
-                          ),
-                        ),
+//                        InkWell(
+//                          onTap: null,
+//                          child: Padding(
+//                            padding: const EdgeInsets.only(top: 0.0),
+//                            child: Text(
+//                              "تعديل",
+//                              style: TextStyle(
+//                                fontFamily: ArabicFonts.El_Messiri,
+//                                package: 'google_fonts_arabic',
+//                              ),
+//                            ),
+//                          ),
+//                        ),
                       ],
                     ),
                     Container(),

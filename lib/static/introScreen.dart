@@ -11,7 +11,7 @@ class IntroScreen extends StatefulWidget {
 class _IntroScreenState extends State<IntroScreen> {
   final pages = [
     PageViewModel(
-      pageColor: Color(0xFFF7F7F7),
+      pageColor: Color(0xFFFFFFFF),
       bubbleBackgroundColor: Colors.brown,
       title: Container(),
       body: Column(
@@ -25,7 +25,7 @@ class _IntroScreenState extends State<IntroScreen> {
             ),
           ),
           Text(
-            'توفر كل سبل السفر والسياحة وحجز الشقق',
+            'منصة وفود البيت للسفر و السياحة لخدمات السفر',
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontFamily: ArabicFonts.El_Messiri,
@@ -46,7 +46,7 @@ class _IntroScreenState extends State<IntroScreen> {
       ),
     ),
     PageViewModel(
-      pageColor: Color(0xFFF7F7F7),
+      pageColor: Color(0xFFFFFFFF),
       iconColor: null,
       bubbleBackgroundColor: Colors.brown,
       title: Container(),
@@ -82,7 +82,7 @@ class _IntroScreenState extends State<IntroScreen> {
       ),
     ),
     PageViewModel(
-      pageColor: Color(0xFFF7F7F7),
+      pageColor: Color(0xFFFFFFFF),
       iconColor: null,
       bubbleBackgroundColor: Colors.brown,
       title: Container(),
@@ -97,7 +97,7 @@ class _IntroScreenState extends State<IntroScreen> {
             ),
           ),
           Text(
-            'اي كلام اخر هنا اي كلام اخر يكون هنا وصف',
+            'هي منصة توفر لك كل خدمات السفر والسياحة',
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontFamily: ArabicFonts.El_Messiri,

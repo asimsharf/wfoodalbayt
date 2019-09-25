@@ -81,14 +81,14 @@ class _OfferlistTabViewState extends State<OfferlistTabView> {
 
           return GestureDetector(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (BuildContext context) => DetailsPageSubFields(
-                    subfieldId: _offersObj.subfieldId,
-                  ),
-                ),
-              );
+//              Navigator.push(
+//                context,
+//                MaterialPageRoute(
+//                  builder: (BuildContext context) => DetailsPageSubFields(
+//                    subfieldId: _offersObj.subfieldId,
+//                  ),
+//                ),
+//              );
             },
             child: Card(
               elevation: 0.0,

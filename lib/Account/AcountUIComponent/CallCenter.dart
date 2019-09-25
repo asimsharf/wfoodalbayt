@@ -1,12 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts_arabic/fonts.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class callCenter extends StatefulWidget {
   @override
   _callCenterState createState() => _callCenterState();
 }
 
-class _callCenterState extends State<callCenter> {
+class _callCenterState extends State<callCenter>
+    with SingleTickerProviderStateMixin, TickerProviderStateMixin {
+  AnimationController _controllers;
+
+  String result;
+
+  @override
+  void dispose() {
+    _controllers.dispose();
+    super.dispose();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _controllers = new AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 500),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,10 +84,9 @@ class _callCenterState extends State<callCenter> {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 40.0),
-                child: InkWell(
+                child: GestureDetector(
                   onTap: () {
-//                Navigator.of(context).push(PageRouteBuilder(
-//                    pageBuilder: (_, __, ___) => new chatItem()));
+                    _ChackSendEmail(context);
                   },
                   child: Center(
                     child: Container(
@@ -98,5 +119,36 @@ class _callCenterState extends State<callCenter> {
         ),
       ),
     );
+  }
+
+  _ChackSendEmail(context) {
+    Alert(
+        context: context,
+        title: "خدمة الدعم الفني",
+        content: Text(
+          "هل تريد إرسال بريد إلكتروني؟",
+          style: TextStyle(
+            fontFamily: ArabicFonts.El_Messiri,
+            package: 'google_fonts_arabic',
+            color: Colors.black,
+            fontSize: 20,
+          ),
+        ),
+        buttons: [
+          DialogButton(
+            onPressed: () => launch(
+                "mailto:info@citysoftech.net?subject=طلب المساعدة بخصوص تطبيق وفود البيت&body=السلام عليكم ورحمة الله "),
+            color: Colors.brown,
+            child: Text(
+              "موافق",
+              style: TextStyle(
+                fontFamily: ArabicFonts.El_Messiri,
+                package: 'google_fonts_arabic',
+                color: Colors.white,
+                fontSize: 20,
+              ),
+            ),
+          ),
+        ]).show();
   }
 }
