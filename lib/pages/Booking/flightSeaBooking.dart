@@ -17,6 +17,8 @@ class flightSeaBooking extends StatefulWidget {
   final double rating;
   final String profileImg;
   final int isActive;
+  final String serviceImg;
+  final String serviceTyp;
 
   flightSeaBooking({
     this.id,
@@ -34,6 +36,8 @@ class flightSeaBooking extends StatefulWidget {
     this.rating,
     this.profileImg,
     this.isActive,
+    this.serviceImg,
+    this.serviceTyp,
   });
 
   @override
@@ -98,7 +102,7 @@ class _RegisterPlayerState extends State<flightSeaBooking> {
   Widget build(BuildContext context) {
     return new Scaffold(
       key: globalKey,
-      backgroundColor: Color(0xFF193096),
+      backgroundColor: Colors.brown,
       body: new Stack(
         children: <Widget>[
           _loginContainer(),
@@ -128,7 +132,14 @@ class _RegisterPlayerState extends State<flightSeaBooking> {
 
   /// Image or Logo Container
   Widget _appImage() {
-    return Text("booking flight");
+    return Container(
+      margin: EdgeInsets.only(top: 30.0),
+      child: Image.network(
+        "${widget.serviceImg}",
+        height: 120.0,
+        width: 120.0,
+      ),
+    );
   }
 
   /// App Icon Container
@@ -137,7 +148,7 @@ class _RegisterPlayerState extends State<flightSeaBooking> {
       margin: EdgeInsets.only(top: 5.0),
       padding: const EdgeInsets.only(top: 10.0),
       child: new Text(
-        "معلومات اللاعب",
+        "${widget.serviceTyp}",
         textAlign: TextAlign.center,
         style: TextStyle(
           fontFamily: ArabicFonts.El_Messiri,

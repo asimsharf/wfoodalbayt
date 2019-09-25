@@ -377,6 +377,8 @@ class _DetailsPageState extends State<DetailsPage> {
                               _tappedCategoryCell(
                                 widget.fieldId.toString(),
                                 service['id'].toString(),
+                                service['img'].toString(),
+                                service['service_type'].toString(),
                               );
                             },
                             child: Container(
@@ -526,7 +528,8 @@ class _DetailsPageState extends State<DetailsPage> {
     );
   }
 
-  void _tappedCategoryCell(String subfieldId, String serviceId) {
+  void _tappedCategoryCell(String subfieldId, String serviceId,
+      String serviceImg, String serviceTyp) {
     switch ('$serviceId') {
       case '1': //flightSeaBooking.dart
         /// Booking for flight
@@ -549,6 +552,8 @@ class _DetailsPageState extends State<DetailsPage> {
               rating: widget.rating,
               profileImg: widget.profileImg,
               isActive: widget.isActive,
+              serviceImg: serviceImg,
+              serviceTyp: serviceTyp,
             ),
           ),
         );

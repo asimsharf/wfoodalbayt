@@ -1,31 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="390301e8-d526-4dae-8f51-57a1c48cf9b1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/.idea/assets.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/Booking/TripsBook.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/Booking/appartmentBook.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/Booking/hotelBooking.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wfoodalbayt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wfoodalbayt.iml" afterDir="false" />
+    <list default="true" id="390301e8-d526-4dae-8f51-57a1c48cf9b1" name="Default" comment="Book">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Account/AcountUIComponent/CallCenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Account/AcountUIComponent/CallCenter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Account/AcountUIComponent/ProfileTabView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Account/AcountUIComponent/ProfileTabView.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/Booking/Book.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/Booking/Book.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/Booking/FlightBooking.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/Booking/flightSeaBooking.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/Booking/SeeBooking.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/Booking/flightSeaBooking.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/Booking/flightSeaBooking.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/DetailsPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/DetailsPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/tabs/OfferlistTabView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/tabs/OfferlistTabView.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/api/APIsServices.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/api/APIsServices.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/api/Rating_api_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/api/Rating_api_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/static/introScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/static/introScreen.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/pages/Booking/TripsBook.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+            <state relative-caret-position="-650">
+              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -51,17 +30,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/pages/Booking/flightSeaBooking.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+            <state relative-caret-position="49">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#204#283#0" />
-                <element signature="e#972#1321#0" />
-                <element signature="e#2348#2549#0" />
-                <element signature="e#2480#2488#0" expanded="true" />
-                <element signature="e#2600#2936#0" />
-                <element signature="e#2673#2681#0" expanded="true" />
-                <element signature="e#2760#2768#0" expanded="true" />
+                <element signature="e#1008#1023#0" expanded="true" />
+                <element signature="e#2779#2975#0" />
+                <element signature="e#2906#2914#0" expanded="true" />
+                <element signature="e#3026#3362#0" />
+                <element signature="e#3099#3107#0" expanded="true" />
+                <element signature="e#3186#3194#0" expanded="true" />
+                <element signature="e#3415#3598#0" />
                 <element signature="e#5162#5606#0" />
                 <element signature="e#5685#6361#0" />
                 <element signature="e#6410#7038#0" />
@@ -72,6 +51,50 @@
                 <element signature="e#11593#12368#0" />
                 <element signature="e#12417#12769#0" />
                 <element signature="e#12812#13111#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/pages/Booking/Book.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-10150">
+              <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#3507#3515#0" expanded="true" />
+                <element signature="e#4213#4221#0" expanded="true" />
+                <element signature="e#4597#4604#0" expanded="true" />
+                <element signature="e#6534#6542#0" expanded="true" />
+                <element signature="e#7352#7360#0" expanded="true" />
+                <element signature="e#8219#8227#0" expanded="true" />
+                <element signature="e#9026#9034#0" expanded="true" />
+                <element signature="e#9080#9088#0" expanded="true" />
+                <element signature="e#11821#11829#0" expanded="true" />
+                <element signature="e#13161#13169#0" expanded="true" />
+                <element signature="e#14509#14517#0" expanded="true" />
+                <element signature="e#15856#15864#0" expanded="true" />
+                <element signature="e#17832#17840#0" expanded="true" />
+                <element signature="e#19628#19636#0" expanded="true" />
+                <element signature="e#20413#20421#0" expanded="true" />
+                <element signature="e#21830#21838#0" expanded="true" />
+                <element signature="e#23793#23801#0" expanded="true" />
+                <element signature="e#23992#24000#0" expanded="true" />
+                <element signature="e#24504#24512#0" expanded="true" />
+                <element signature="e#25287#25318#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/pages/DetailsPage.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="379" column="58" selection-start-line="379" selection-start-column="58" selection-end-line="379" selection-end-column="58" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -208,10 +231,10 @@
         <option value="$PROJECT_DIR$/lib/Account/AcountUIComponent/ProfileTabView.dart" />
         <option value="$PROJECT_DIR$/lib/static/introScreen.dart" />
         <option value="$PROJECT_DIR$/lib/Account/AcountUIComponent/CallCenter.dart" />
-        <option value="$PROJECT_DIR$/lib/pages/DetailsPage.dart" />
         <option value="$PROJECT_DIR$/lib/pages/Booking/appartmentBook.dart" />
         <option value="$PROJECT_DIR$/lib/pages/Booking/hotelBooking.dart" />
         <option value="$PROJECT_DIR$/lib/pages/Booking/TripsBook.dart" />
+        <option value="$PROJECT_DIR$/lib/pages/DetailsPage.dart" />
         <option value="$PROJECT_DIR$/lib/pages/Booking/flightSeaBooking.dart" />
       </list>
     </option>
@@ -405,6 +428,14 @@
       <option name="presentableId" value="Default" />
       <updated>1559435409285</updated>
     </task>
+    <task id="LOCAL-00001" summary="Book">
+      <created>1569445847749</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569445847749</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -418,7 +449,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21709532" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -431,7 +461,7 @@
       <window_info id="Resources Explorer" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.492635" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.16693944" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15875614" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -489,6 +519,11 @@
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info anchor="right" id="Device File Explorer" order="8" side_tool="true" />
     </layout-to-restore>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Book" />
+    <option name="LAST_COMMIT_MESSAGE" value="Book" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assets/icon/truck.png">
@@ -795,37 +830,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/pages/DetailsPage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="664" column="39" selection-start-line="664" selection-start-column="39" selection-end-line="664" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#15028#15036#0" expanded="true" />
-            <element signature="e#17165#17173#0" expanded="true" />
-            <element signature="e#17987#17995#0" expanded="true" />
-            <element signature="e#19104#19230#0" />
-            <element signature="e#19323#19443#0" />
-            <element signature="e#22672#23390#0" />
-            <element signature="e#23383#25850#0" />
-            <element signature="e#25999#32703#0" />
-            <element signature="e#32736#33416#0" />
-            <element signature="e#33459#34169#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/pages/Booking/TripsBook.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        <state relative-caret-position="-650">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/pages/Booking/Book.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="10" selection-start-line="10" selection-end-line="43" />
+        <state relative-caret-position="-10150">
+          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="e#3507#3515#0" expanded="true" />
@@ -852,19 +867,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/pages/DetailsPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="379" column="58" selection-start-line="379" selection-start-column="58" selection-end-line="379" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/pages/Booking/flightSeaBooking.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+        <state relative-caret-position="49">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#204#283#0" />
-            <element signature="e#972#1321#0" />
-            <element signature="e#2348#2549#0" />
-            <element signature="e#2480#2488#0" expanded="true" />
-            <element signature="e#2600#2936#0" />
-            <element signature="e#2673#2681#0" expanded="true" />
-            <element signature="e#2760#2768#0" expanded="true" />
+            <element signature="e#1008#1023#0" expanded="true" />
+            <element signature="e#2779#2975#0" />
+            <element signature="e#2906#2914#0" expanded="true" />
+            <element signature="e#3026#3362#0" />
+            <element signature="e#3099#3107#0" expanded="true" />
+            <element signature="e#3186#3194#0" expanded="true" />
+            <element signature="e#3415#3598#0" />
             <element signature="e#5162#5606#0" />
             <element signature="e#5685#6361#0" />
             <element signature="e#6410#7038#0" />
