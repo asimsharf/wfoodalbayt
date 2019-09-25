@@ -6,6 +6,8 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 import 'package:wfoodalbayt/Account/utils/app_shared_preferences.dart';
 import 'package:wfoodalbayt/pages/Booking/Book.dart';
+import 'package:wfoodalbayt/pages/Booking/FlightBooking.dart';
+import 'package:wfoodalbayt/pages/Booking/SeeBooking.dart';
 import 'package:wfoodalbayt/pages/Rating.dart';
 import 'package:wfoodalbayt/ui_widgets/SizedText.dart';
 
@@ -366,10 +368,32 @@ class _DetailsPageState extends State<DetailsPage> {
                     runSpacing: 5.0,
                     direction: Axis.horizontal,
                     alignment: WrapAlignment.start,
-                    children: getServiceList(widget.service)
-                        .map((serviceType) => MyButton(
-                              serviceType,
-                            ))
+                    children: widget.service
+                        .map(
+                          (service) => new Card(
+                            elevation: 2.0,
+                            color: Colors.grey,
+                            child: new InkWell(
+                              highlightColor: Colors.white.withAlpha(30),
+                              splashColor: Colors.white.withAlpha(20),
+                              child: new Column(
+                                  crossAxisAlignment:
+                                      CrossAxisAlignment.stretch,
+                                  mainAxisSize: MainAxisSize.min,
+                                  verticalDirection: VerticalDirection.up,
+                                  children: <Widget>[
+                                    new Image.network(service['img']),
+                                    new Center(
+                                      child: new Text(service['service_type']),
+                                    )
+                                  ]),
+                              onTap: () {
+                                _tappedCategoryCell(widget.fieldId as int,
+                                    service['id'] as int);
+                              },
+                            ),
+                          ),
+                        )
                         .toList(),
                   ),
                 ),
@@ -400,33 +424,10 @@ class _DetailsPageState extends State<DetailsPage> {
                   height: 400.0,
                   child: new Stack(
                     children: <Widget>[
-                      new GoogleMap(
-                        markers: _markers,
-                        mapType: _defaultMapType,
-                        myLocationEnabled: true,
-                        initialCameraPosition: _initialPosition,
-                        onMapCreated: _onMapCreated,
-                        zoomGesturesEnabled: true,
-                        scrollGesturesEnabled: true,
-                        compassEnabled: true,
-                        tiltGesturesEnabled: true,
-                        rotateGesturesEnabled: true,
-                      ),
                       new Container(
                         margin: EdgeInsets.only(top: 80, right: 10),
                         alignment: Alignment.topRight,
-                        child: Column(
-                          children: <Widget>[
-                            FloatingActionButton(
-                              child: Icon(Icons.layers),
-                              elevation: 5,
-                              backgroundColor: Colors.teal[200],
-                              onPressed: () {
-                                _changeMapType();
-                              },
-                            ),
-                          ],
-                        ),
+                        child: Text(widget.addressText),
                       ),
                     ],
                   ),
@@ -538,6 +539,44 @@ class _DetailsPageState extends State<DetailsPage> {
         ),
       ),
     );
+  }
+
+  void _tappedCategoryCell(int subfieldId, int serviceId) {
+    switch (serviceId) {
+      case 1: //FlightBooking.dart
+        //تذاكر طيران
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => FlightBooking(),
+          ),
+        );
+        break;
+      case 2: //SeeBooking
+        //تذاكر نقل بحري
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => SeeBooking(),
+          ),
+        );
+        break;
+      case 3:
+        //ايجار سيارات
+        break;
+      case 4:
+        //ايجار فنادق
+        break;
+      case 5:
+        //ايجار شقق
+        break;
+      case 6:
+        //سفاري ورحلات
+        break;
+      case 7:
+        //خدمات افراد
+        break;
+    }
   }
 
   //Show Modal Sheet that Display all the #Rating about specific Fields

@@ -417,41 +417,6 @@ class _DetailsPageSubFieldsState extends State<DetailsPageSubFields> {
                           ],
                         ),
                       ),
-                      new Container(
-                        height: 400.0,
-                        child: new Stack(
-                          children: <Widget>[
-                            new GoogleMap(
-                              markers: _markers,
-                              mapType: _defaultMapType,
-                              myLocationEnabled: true,
-                              initialCameraPosition: _initialPosition,
-                              onMapCreated: _onMapCreated,
-                              zoomGesturesEnabled: true,
-                              scrollGesturesEnabled: true,
-                              compassEnabled: true,
-                              tiltGesturesEnabled: true,
-                              rotateGesturesEnabled: true,
-                            ),
-                            new Container(
-                              margin: EdgeInsets.only(top: 80, right: 10),
-                              alignment: Alignment.topRight,
-                              child: Column(
-                                children: <Widget>[
-                                  FloatingActionButton(
-                                      child: Icon(Icons.layers),
-                                      elevation: 5,
-                                      backgroundColor: Colors.teal[200],
-                                      onPressed: () {
-                                        _changeMapType();
-                                        print('Changing the Map Type');
-                                      }),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
                     ],
                   ),
                 ),
